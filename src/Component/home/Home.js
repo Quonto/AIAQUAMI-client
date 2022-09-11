@@ -12,6 +12,7 @@ import KSteam from "../../Content/img/team/Katarina_Stojanovic.jpg";
 import DSZteam from "../../Content/img/team/Dimitrija_Savic_Zdravkovic.jpg";
 import PSteam from "../../Content/img/team/Predrag_Simovic.jpg";
 import "./home.css";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
@@ -340,11 +341,13 @@ const Home = () => {
           >
             Tweets by AIAQUAMI
           </a>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charSet="utf-8"
-          ></script>
+          <Helmet>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charSet="utf-8"
+            ></script>
+          </Helmet>
         </div>
       </div>
     </div>

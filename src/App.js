@@ -5,19 +5,22 @@ import Login from "./Component/login/Login";
 import MyProjects from "./Component/myProjects/MyProjects";
 import Navbar from "./Component/navbar/Navbar";
 import Register from "./Component/register/Register";
+import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route exact path="/myProjects" element={<MyProjects />}></Route>
-        <Route exact path="/register" element={<Register />}></Route>
-        <Route exact path="/login" element={<Login />}></Route>
-      </Routes>
-      <Footer />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/myProjects" element={<MyProjects />}></Route>
+          <Route exact path="/register" element={<Register />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 };
 
