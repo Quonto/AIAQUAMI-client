@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Content/bootstrap.css";
+//import "./navbar.css";
 const Navbar = () => {
   const [menuCollapsed, setMenuCollapsed] = useState(false);
 

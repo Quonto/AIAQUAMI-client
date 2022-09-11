@@ -11,7 +11,7 @@ import MRteam from "../../Content/img/team/Milena_Radenkovic.jpg";
 import KSteam from "../../Content/img/team/Katarina_Stojanovic.jpg";
 import DSZteam from "../../Content/img/team/Dimitrija_Savic_Zdravkovic.jpg";
 import PSteam from "../../Content/img/team/Predrag_Simovic.jpg";
-import "./home.css";
+//import "./home.css";
 import { Helmet } from "react-helmet-async";
 
 const Home = () => {
