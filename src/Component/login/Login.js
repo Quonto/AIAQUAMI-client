@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <div className="row">
@@ -23,7 +25,10 @@ const Login = () => {
           </div>
           <div className="form-group">
             <div className="col-md-offset-2 col-md-10">
-              <div className="checkbox"></div>
+              <div className="checkbox">
+                <input id="check" type="checkbox" style={{ margin: "0px" }} />
+                <label htmlFor="check">Remeber me?</label>
+              </div>
             </div>
           </div>
           <div className="form-group">
@@ -31,7 +36,9 @@ const Login = () => {
               <input type="submit" value="Log in" className="btn btn-default" />
             </div>
           </div>
-          <p></p>
+          <p>
+            <Link to={"/register"}>Register as a new user</Link>
+          </p>
         </section>
       </div>
     </div>
