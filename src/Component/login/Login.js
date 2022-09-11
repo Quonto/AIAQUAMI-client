@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+    rememberMe: false,
+  });
+
+  const handleLogin = () => {
+    console.log(user);
+  };
+
   return (
     <div className="row">
       <div className="col-md-12">
@@ -12,7 +23,14 @@ const Login = () => {
               Email
             </label>
             <div className="col-md-10">
-              <input id="email" className="form-control" type="text" />
+              <input
+                id="email"
+                className="form-control"
+                type="text"
+                onChange={(e) => {
+                  setUser({ ...user, email: e.target.value });
+                }}
+              />
             </div>
           </div>
           <div className="form-group">
@@ -20,20 +38,36 @@ const Login = () => {
               Password
             </label>
             <div className="col-md-10">
-              <input id="password" className="form-control" type="password" />
+              <input
+                id="password"
+                className="form-control"
+                type="password"
+                onChange={(e) => {
+                  setUser({ ...user, password: e.target.value });
+                }}
+              />
             </div>
           </div>
           <div className="form-group">
             <div className="col-md-offset-2 col-md-10">
               <div className="checkbox">
-                <input id="check" type="checkbox" style={{ margin: "0px" }} />
+                <input
+                  id="check"
+                  type="checkbox"
+                  style={{ margin: "0px" }}
+                  onChange={() => {
+                    setUser({ ...user, rememberMe: !user.rememberMe });
+                  }}
+                />
                 <label htmlFor="check">Remeber me?</label>
               </div>
             </div>
           </div>
           <div className="form-group">
             <div className="col-md-offset-2 col-md-10">
-              <input type="submit" value="Log in" className="btn btn-default" />
+              <button className="btn btn-default" onClick={handleLogin}>
+                Log in
+              </button>
             </div>
           </div>
           <p>
