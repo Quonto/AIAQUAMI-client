@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./Component/footer/footer";
 import Home from "./Component/home/Home";
 import Login from "./Component/login/Login";
 import MyProjects from "./Component/myProjects/MyProjects";
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/register" element={<Register />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 };
