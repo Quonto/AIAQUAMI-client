@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Content/bootstrap.css";
+import { useGlobalContext } from "../../Context/Context";
 //import "./navbar.css";
 const Navbar = () => {
   const [menuCollapsed, setMenuCollapsed] = useState(false);
+  const { setUser, user } = useGlobalContext();
+
+  const handleLogout = () => {
+    localStorage.setItem("user", null);
+    setUser(null);
+  };
 
   return (
     <div className="navbar navbar-inverse navbar-fixed-top">
@@ -39,12 +46,29 @@ const Navbar = () => {
             </li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
-            <li>
-              <Link to="/login">Log in</Link>
-            </li>
+            {user === null ? (
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/manage">{user.userName}</Link>
+              </li>
+            )}
+            {user === null ? (
+              <>
+                {" "}
+                <li>
+                  <Link to="/login">Log in</Link>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link to="/" onClick={handleLogout}>
+                  Log off
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
