@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
-import { useGlobalContext } from "../../Context/Context";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const Manage = () => {
-  const { userChanged } = useGlobalContext();
-  console.log(userChanged);
+  const { passwordChange } = useParams();
+  const [userChanged, setUserChanged] = useState(false);
+
+  useEffect(() => {
+    setUserChanged(passwordChange === "true");
+  }, [passwordChange]);
+
   return (
     <div className="container body-content">
       <h2>Manage</h2>

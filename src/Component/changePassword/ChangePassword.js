@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../Context/Context";
 import axios from "axios";
 
 const ChangePassword = () => {
-  const { user, setUser, userChanged, setUserChanged } = useGlobalContext();
+  const { user, setUser } = useGlobalContext();
   const [passwordHandle, setPasswordHandle] = useState({
     currentPassword: "",
     newPassword: "",
@@ -73,8 +73,7 @@ const ChangePassword = () => {
         newUser
       );
       setUser(data);
-      setUserChanged(true);
-      window.location.replace("/manage");
+      window.location.replace("/manage/true");
     }
   };
 

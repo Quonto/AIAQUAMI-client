@@ -24,7 +24,11 @@ const App = () => {
             <Route exact path="/myProjects" element={<MyProjects />}></Route>
             <Route exact path="/register" element={<Register />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
-            <Route exact path="/manage" element={<Manage />}></Route>
+            <Route
+              exact
+              path="/manage/:passwordChange"
+              element={<Manage />}
+            ></Route>
             <Route
               exact
               path="/change-password"

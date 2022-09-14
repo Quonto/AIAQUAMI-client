@@ -52,7 +52,7 @@ const Navbar = () => {
               </li>
             ) : (
               <li>
-                <Link to="/manage">{user.userName}</Link>
+                <Link to="/manage/false">{user.userName}</Link>
               </li>
             )}
             {user === null ? (

@@ -11,17 +11,15 @@ const getLocalStorage = (text) => {
 
 const AppProvider = ({ children }) => {
   const [user, setUser] = useState(getLocalStorage("user"));
-  const [userChanged, setUserChanged] = useState(getLocalStorage("changed"));
 
   useEffect(() => {
     if (user) {
       localStorage.setItem("user", JSON.stringify(user));
-      localStorage.setItem("changed", JSON.stringify(userChanged));
     }
-  }, [user, userChanged]);
+  }, [user]);
 
   return (
-    <AppContext.Provider value={{ user, setUser, userChanged, setUserChanged }}>
+    <AppContext.Provider value={{ user, setUser }}>
       {children}
     </AppContext.Provider>
   );
