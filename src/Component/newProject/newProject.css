@@ -1,0 +1,19 @@
+.dropzone {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropzone .dz-preview {
+    width: 160px;
+    margin: 10px;
+}
+
+.dropzone .dz-preview .dz-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 4px;
+}
+
+.progress-probability {
+    margin-bottom: 10px;
+}

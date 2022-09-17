@@ -9,6 +9,7 @@ import { HelmetProvider } from "react-helmet-async";
 import "./app.css";
 import Manage from "./Component/manage/Manage";
 import ChangePassword from "./Component/changePassword/ChangePassword";
+import NewProject from "./Component/newProject/NewProject";
 
 const App = () => {
   return (
@@ -21,9 +22,15 @@ const App = () => {
           </div>{" "}
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
+            <Route
+              exact
+              path="/myProjects/:id"
+              element={<NewProject />}
+            ></Route>
             <Route exact path="/myProjects" element={<MyProjects />}></Route>
             <Route exact path="/register" element={<Register />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/new-project" element={<NewProject />}></Route>
             <Route
               exact
               path="/manage/:passwordChange"
