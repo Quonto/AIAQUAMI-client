@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Content/bootstrap.css";
+import "../../Content/Site.css";
+import "../../Content/font-awesome.css";
 import { useGlobalContext } from "../../Context/Context";
 //import "./navbar.css";
 const Navbar = () => {

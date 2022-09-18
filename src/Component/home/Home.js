@@ -75,6 +75,7 @@ const Home = () => {
           <a
             href="http://fondzanauku.gov.rs/?lang=en"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -92,6 +93,7 @@ const Home = () => {
           <a
             href="https://www.pmf.ni.ac.rs/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -111,6 +113,7 @@ const Home = () => {
           <a
             href="https://www.elfak.ni.ac.rs/en/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -130,6 +133,7 @@ const Home = () => {
           <a
             href="https://www.pmf.kg.ac.rs/?lang=eng"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -149,6 +153,7 @@ const Home = () => {
           <a
             href="https://www.bio.bg.ac.rs/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -170,6 +175,7 @@ const Home = () => {
           <a
             href="https://www.pmf.ni.ac.rs/nastavnici-i-saradnici/?idz=276"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -197,6 +203,7 @@ const Home = () => {
           <a
             href="https://www.linkedin.com/in/aleksandarmilosavljevic/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -220,6 +227,7 @@ const Home = () => {
           <a
             href="https://www.linkedin.com/in/bratislav-predi%C4%87-531ab52b/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -243,6 +251,7 @@ const Home = () => {
           <a
             href="https://www.pmf.kg.ac.rs/?id=274"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -266,6 +275,7 @@ const Home = () => {
           <a
             href="https://www.linkedin.com/in/katarina-stojanovi%C4%87-9854a121/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -289,6 +299,7 @@ const Home = () => {
           <a
             href="https://www.linkedin.com/in/thedimitrija/"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">
@@ -312,6 +323,7 @@ const Home = () => {
           <a
             href="https://www.researchgate.net/profile/Predrag-Simovic"
             target="_blank"
+            rel="noreferrer"
             className="team-member-link"
           >
             <div className="row team-member">

@@ -21,6 +21,21 @@ const MyProjects = () => {
     window.location.replace(`/myProjects/${id}`);
   };
 
+  const handleDate = (date) => {
+    const d = date.split("T");
+    const da = d[0].split("-");
+
+    return da[2] + "/" + da[1] + "/" + da[0];
+  };
+
+  const handleTime = (time) => {
+    const d = time.split("T");
+    const da = d[1].split(":");
+    const second = da[2].split(".");
+
+    return da[0] + ":" + da[1] + ":" + second[0];
+  };
+
   return (
     <>
       <h2>
@@ -60,11 +75,17 @@ const MyProjects = () => {
                     <td>
                       {" "}
                       {project.title.length < 100
-                        ? project.title
-                        : project.title.substring(0, 100) + "..."}
+                        ? project.description
+                        : project.description.substring(0, 100) + "..."}
                     </td>
-                    <td>{project.dateCreated}</td>
-                    <td>{project.dateModified}</td>
+                    <td>
+                      {handleDate(project.dateCreated)}{" "}
+                      {handleTime(project.dateCreated)}
+                    </td>
+                    <td>
+                      {handleDate(project.dateModified)}{" "}
+                      {handleTime(project.dateModified)}
+                    </td>
                   </tr>
                 );
               })}
