@@ -95,26 +95,6 @@ const MyProjects = () => {
       )}
     </>
   );
-  /*
-  @section Scripts {
-      <script type="text/javascript">
-  
-          var $this = this;
-  
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          // jQuery
-  
-          $(document).ready(function () {
-  
-              $(".project-row").click(function () {
-                  console.log($(this).data("projectid"));
-                  window.location.href = '@Url.Content("~/Process/Project")?projectId=' + $(this).data("projectid");
-              });
-  
-          });
-  
-      </script>
-    */
 };
 
 export default MyProjects;

@@ -17,3 +17,29 @@
 .progress-probability {
     margin-bottom: 10px;
 }
+
+
+
+.fallback
+{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.changeFile
+{
+    margin: auto;
+    height: 50%;
+    font-size: medium;
+}
+
+
+
+.upload
+{
+    width: 90px;
+    margin: auto;
+}

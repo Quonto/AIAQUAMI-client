@@ -22,11 +22,12 @@ const NewProject = () => {
     percenteComplite: "",
   });
 
-  const [projectImages] = useState([
+  const [projectImages, setProjectImages] = useState([
     {
       id: 0,
       state: 1,
       size: 0,
+      projectId: 0,
       name: "",
       class1: "",
       classProbability1: "",
@@ -49,6 +50,15 @@ const NewProject = () => {
         );
         setProject(response.data);
       };
+
+      const fetchProductImages = async () => {
+        const response = await axios.get(
+          `https://localhost:7080/api/file/GetProjectImages/${id}`
+        );
+
+        setProjectImages(response.data);
+      };
+      fetchProductImages();
       fetchProduct();
     }
   }, [id]);
@@ -284,10 +294,21 @@ const NewProject = () => {
               <div className="col-sm-12">
                 <input type="hidden" name="projectId" value={project.id} />
                 <div className="fallback">
-                  <input type="file" onChange={saveFile} />
-                  <input type="button" value="Upload" onClick={uploadFile} />
+                  <input
+                    className="changeFile"
+                    type="file"
+                    onChange={saveFile}
+                  />
+                  <input
+                    className="upload"
+                    type="button"
+                    value="Upload"
+                    onClick={uploadFile}
+                  />
                 </div>
-                {projectImages.map((image, index) => {})}
+                {projectImages.map((image, index) => {
+                  return <div key={index} className="dz-image"></div>;
+                })}
               </div>
             </div>
           );

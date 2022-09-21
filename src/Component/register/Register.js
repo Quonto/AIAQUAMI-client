@@ -30,7 +30,17 @@ const Register = () => {
   };
 
   const handleRegister = async () => {
-    console.log(user);
+    if (!validateEmail(user.email) || user.email.length === 0) {
+      return;
+    }
+    if (user.passwordHash.length < 6) {
+      return;
+    }
+
+    if (user.passwordHash !== user.confirmPassword) {
+      return;
+    }
+
     try {
       const response = await axios.post(
         `https://localhost:7080/Account/RegisterUser/`,

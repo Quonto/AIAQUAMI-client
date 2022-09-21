@@ -20,13 +20,12 @@ const Login = () => {
       passwordHash: userLogin.password,
       userName: userLogin.email,
     };
-    console.log("Handle login function");
+
     try {
       const response = await axios.post(
         `https://localhost:7080/Account/Login/`,
         newUser
       );
-      console.log(response);
       setUser(response.data);
       setInvalidLogin(false);
       window.location.replace("/");
